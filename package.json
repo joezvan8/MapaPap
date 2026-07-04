@@ -15,6 +15,7 @@
     "@fontsource/roboto": "^5.2.10",
     "@mui/icons-material": "^9.1.1",
     "@mui/material": "^9.1.2",
+    "mapapap": "github:joezvan8/MapaPap",
     "react": "^19.2.7",
     "react-dom": "^19.2.7"
   },
