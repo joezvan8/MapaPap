@@ -1,5 +1,4 @@
-import { Button } from "@mui/material";
-import styles from './AccountBtn.module.css';
+import style from './AccountBtn.module.css';
 
 export default function AccountBtn(){
 
@@ -8,6 +7,6 @@ export default function AccountBtn(){
     }
 
     return (
-        <Button className={styles.acctbtn} onClick={navigate}></Button>
+        <button className={style.acctBtn} onClick={navigate}></button>
     );
 }
