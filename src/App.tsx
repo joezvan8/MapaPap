@@ -5,6 +5,6 @@ export default function App(){
     return <>
         <SearchBar></SearchBar>
         <AccountBtn></AccountBtn>
-    </>
+    </>;
     
 }
