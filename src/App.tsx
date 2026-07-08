@@ -1,6 +1,6 @@
-import SearchBar from "./components/SearchBar";
-import AccountBtn from "./components/AccountBtn/AccountBtn.tsx";
-import './stylesheets/App.css'
+import SearchBar from "@components/SearchBar.tsx";
+import AccountBtn from "@components/AccountBtn/AccountBtn.tsx";
+import '@stylesheets/App.css'
 
 export default function App(){
     return <>
