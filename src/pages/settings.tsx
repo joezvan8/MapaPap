@@ -1,6 +1,11 @@
+import { Link } from "react-router";
+
 function settings() {
-  return (
-    <div>settings</div>
+  return (<>
+    <Link to="/">Home (Placeholder)</Link>
+    <hr />
+    <Link to="/account">Account (Placeholder)</Link>
+    </>
   )
 }
 
