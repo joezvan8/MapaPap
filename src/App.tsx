@@ -1,12 +1,18 @@
-import SearchBar from "@components/SearchBar.tsx";
-import AccountBtn from "@components/AccountBtn/AccountBtn.tsx";
 import '@stylesheets/App.css'
+import { HashRouter, Routes, Route } from 'react-router';
+import Home from '@pages/home.tsx' 
+import Account from '@pages/account'
+import Settings from '@pages/settings'
 
 export default function App(){
-    return <>
-        <SearchBar></SearchBar>
-        <div id="return-bar">Returned stuff go here</div> {/* Temporary text to show where returned stuff would go*/}
-        <AccountBtn></AccountBtn>
-    </>;
+    return (
+        <HashRouter>
+            <Routes>
+                <Route path='/' element={<Home/>}/>
+                <Route path='/account' element={<Account/>}/>
+                <Route path='/settings' element={<Settings/>}/>
+            </Routes>
+        </HashRouter>
+    )
     
 }

@@ -1,7 +1,6 @@
-function account() {
+
+export default function Account() {
   return (
     <div>account</div>
   )
 }
-
-export default account
