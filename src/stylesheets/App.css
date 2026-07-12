@@ -1,4 +1,31 @@
+:root {
+    --primary-bg-color: #68f4a9;
+    --secondary-bg-color: #0f3d6b;
+    --spacing: 10px;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-image: linear-gradient(
+            to bottom,
+            var(--primary-bg-color),
+            var(--secondary-bg-color) 100%);
+    background-attachment: fixed;
+}
+
+#intro-txt{
+    font-family: 'Josefin Slab', serif;
+    font-size: 3.5rem;
+    text-align: center;
+    margin: 1rem auto;
+}
+
 #return-bar{
-    height: 75vh;
+    height: 60vh;
     width: auto;
+    border: 1px solid;
+    margin-top: var(--spacing);
+    margin-bottom: var(--spacing);
 }
