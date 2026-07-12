@@ -25,10 +25,11 @@ body{
             rgb(from var(--primary-bg-color) r g b / 50%),
             rgb(from var(--secondary-bg-color) r g b / 50%));
     background-attachment: fixed;
+    font-family: 'Josefin Slab', serif;
 }
 
 #intro-txt{
-    font-family: 'Josefin Slab', serif;
+
     font-size: 3.5rem;
     text-align: center;
     margin: 1rem auto;
