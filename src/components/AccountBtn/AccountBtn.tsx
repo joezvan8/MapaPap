@@ -1,12 +1,9 @@
-import style from './AccountBtn.module.css';
+import styles from './AccountBtn.module.css';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 export default function AccountBtn(){
 
-    function navigate(){
-
-    }
-
     return (
-        <button className={style.acctBtn} onClick={navigate}></button>
+        <AccountCircleIcon className={styles.acctBtn}></AccountCircleIcon>
     );
 }

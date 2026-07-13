@@ -1,8 +1,8 @@
-.acctBtn {
+.settBtn{
     color: #000000;
     transform: scale(3.5);
 }
 
-.acctBtn:hover {
+.settBtn:hover {
     color: hsl(from #000000 h s calc(l + 10));
 }
