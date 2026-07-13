@@ -1,9 +1,8 @@
 .settBtn{
-    color: black;
-    transform: scale(1.5);
-    height: 100px;
-    width: 70px;
-    border: 1px solid;
-    margin: 30px;
+    color: #000000;
+    transform: scale(3.5);
+}
 
+.settBtn:hover {
+    color: hsl(from #000000 h s calc(l + 10));
 }
