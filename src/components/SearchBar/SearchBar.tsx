@@ -9,7 +9,15 @@ function SearchBar() {
         component="form"
         noValidate
         autoComplete="off">
-        <TextField id="outlined-basic" label="What we feel for today???" variant="outlined" />
+        <TextField id={styles.textbox}
+                   label="What we feel for today???"
+                   variant="outlined"
+                   fullWidth
+                   sx={{
+                       '& .MuiOutlinedInput-root':{
+                           borderRadius:"50px"
+                       }
+                   }} />
       
     </Box>
   )
