@@ -1,4 +1,44 @@
+:root {
+    --primary-bg-color: #68f4a9;
+    --secondary-bg-color: #0f3d6b;
+    --spacing: 10px;
+}
+
+@font-face {
+    font-family: 'Josefin Slab';
+    src: url('../fonts/JosefinSlab-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: 'Josefin Slab';
+    src: url('../fonts/JosefinSlab-Italic-VariableFont_wght.ttf');
+    font-style: italic;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: black;
+    background-image: linear-gradient(
+            to bottom,
+            rgb(from var(--primary-bg-color) r g b / 50%),
+            rgb(from var(--secondary-bg-color) r g b / 50%));
+    background-attachment: fixed;
+    font-family: 'Josefin Slab', serif;
+}
+
+#intro-txt{
+
+    font-size: 3.5rem;
+    text-align: center;
+    margin: 1rem auto;
+}
+
 #return-bar{
-    height: 75vh;
+    height: 60vh;
     width: auto;
+    border: 1px solid;
+    margin-top: var(--spacing);
+    margin-bottom: var(--spacing);
 }
