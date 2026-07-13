@@ -29,7 +29,6 @@ body{
 }
 
 #intro-txt{
-
     font-size: 3.5rem;
     text-align: center;
     margin: 1rem auto;
@@ -39,6 +38,35 @@ body{
     height: 60vh;
     width: auto;
     border: 1px solid;
+    border-radius: 15px;
     margin-top: var(--spacing);
     margin-bottom: var(--spacing);
+    padding: 15px;
+}
+
+#nav-tools{
+    margin-top: calc(var(--spacing) * 4);
+    margin-right: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nav-items{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-size: 1em;
+    gap: 25px;
+}
+.nav-items:hover {
+    color: hsl(from #000000 h s calc(l + 10));
+}
+.nav-items p {
+    margin: 0 0 0 0;
+}
+.nav-items:hover p {
+    color: hsl(20, 30%, 50%)
 }
