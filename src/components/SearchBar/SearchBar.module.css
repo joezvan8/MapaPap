@@ -1,0 +1,19 @@
+:root{
+    --colorvar1: #FFFFFF;
+    --colorvar2: #6FB6BE;
+}
+
+.searchBar{
+    background-image: radial-gradient(
+            rgb(from var(--colorvar1) r g b / 30%),
+            rgb(from var(--colorvar2) r g b / 30%));
+    color: #000000;
+    width: 250px;
+    border: 1px solid;
+}
+
+.searchBar:hover{
+    background-image: radial-gradient(
+            rgb(from var(--colorvar1) r g b / 90%),
+            rgb(from var(--colorvar2) r g b / 90%));
+}
