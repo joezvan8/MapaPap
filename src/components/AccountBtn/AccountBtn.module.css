@@ -1,8 +1,12 @@
 .acctBtn {
-    background-color: #51b4cf;
-    padding: 10px;
+    color: #000000;
     height: 100px;
     width: 70px;
-    border-radius: 70%;
-    border: 1px solid rgba(131, 228, 131, 0.993);
+    transform: scale(1.2);
+    /* border: 1px solid; */
+
+}
+
+.acctBtn:hover {
+    color: hsl(from #000000 h s calc(l + 10));
 }
