@@ -1,4 +1,4 @@
-import SearchBar from "@components/SearchBar.tsx";
+import SearchBar from "@components/SearchBar/SearchBar.tsx";
 import AccountBtn from "@components/AccountBtn/AccountBtn.tsx";
 import SettingsBtn from "@components/SettingsBtn/SettingsBtn.tsx";
 import '@stylesheets/App.css'
