@@ -1,0 +1,9 @@
+.settBtn{
+    color: black;
+    transform: scale(1.5);
+    height: 100px;
+    width: 70px;
+    border: 1px solid;
+    margin: 30px;
+
+}
