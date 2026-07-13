@@ -1,0 +1,39 @@
+:root{
+    --colorvar1: #FFFFFF;
+    --colorvar2: #6FB6BE;
+}
+
+@font-face {
+    font-family: 'Josefin Slab';
+    src: url('../../fonts/JosefinSlab-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: 'Josefin Slab';
+    src: url('../../fonts/JosefinSlab-Italic-VariableFont_wght.ttf');
+    font-style: italic;
+}
+
+.searchBar{
+    background-image: radial-gradient(
+            rgb(from var(--colorvar1) r g b / 30%),
+            rgb(from var(--colorvar2) r g b / 30%));
+    color: #000000;
+    width: 300px;
+    border-radius: 50px;
+}
+.searchBar:hover:not(:active){
+    background-image: radial-gradient(
+            rgb(from var(--colorvar1) r g b / 90%),
+            rgb(from var(--colorvar2) r g b / 90%));
+}
+.searchBar:active{
+    background-image: radial-gradient(
+            rgb(from var(--colorvar1) r g b / 60%),
+            rgb(from var(--colorvar2) r g b / 60%));
+}
+
+#textbox{
+    width: 100%;
+    font-family: 'Josefin Slab', serif;
+}

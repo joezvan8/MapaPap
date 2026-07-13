@@ -8,7 +8,7 @@ export default function Home(){
     return <>
         <div id="intro-txt">Let's find some eats!</div>
 
-        <SearchBar></SearchBar>
+        <div id="search-bar-thingy"><SearchBar></SearchBar></div>
 
         <div id="return-bar">Returned stuff go here</div> {/* Temporary text to show where returned stuff would go*/}     
 

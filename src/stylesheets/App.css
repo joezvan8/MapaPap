@@ -34,6 +34,12 @@ body{
     margin: 1rem auto;
 }
 
+#search-bar-thingy{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
 #return-bar{
     height: 60vh;
     width: auto;
