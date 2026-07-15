@@ -8,6 +8,8 @@
     "allowArbitraryExtensions": true,
     "skipLibCheck": true,
     "ignoreDeprecations": "6.0",
+    "allowJs": true,
+    "checkJs": false,
     "baseUrl": ".",
     "paths": {
       "@components/*": ["src/components/*"],
@@ -16,7 +18,7 @@
       "@stylesheets/*": ["src/stylesheets/*"],
       "@utils/*": ["src/utils/*"],
       "@hooks/*": ["src/hooks/*"],
-      "@features/*": ["src/features/*"],
+      "@features/*": ["src/features/*"]
     },
 
     /* Bundler mode */
