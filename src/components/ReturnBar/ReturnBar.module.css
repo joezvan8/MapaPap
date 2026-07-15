@@ -1,0 +1,18 @@
+:root {
+    --base-color: #8B8383;
+}
+
+.returnBar{
+    background-color: var(--base-color);
+    mix-blend-mode: plus-lighter;
+    max-width: 100%;
+    width: auto;
+    height: 60vh;
+    border-radius: inherit;
+    padding: 10px;
+    overflow-y: scroll;
+    white-space: normal;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    line-height: 1.4;
+}
