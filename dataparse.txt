@@ -1,0 +1,9 @@
+link example as follows:
+GET request
+https://nominatim.openstreetmap.org/search?q=Rutgers&format=jsonv2
+
+var base = "https://nominatim.openstreetmap.org/"
+var querytype = "search?q=" or search
+var query = user input address (with pluses)
+var format = "jsonv2"
+var addressdetails = 0 or 1
