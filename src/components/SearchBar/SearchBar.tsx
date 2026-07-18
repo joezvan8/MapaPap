@@ -2,21 +2,24 @@ import { Box, TextField } from '@mui/material';
 import styles from './SearchBar.module.css';
 import urlBuilder from '@utils/builder.ts';
 import {useContext} from "react";
-import {InputContext} from "@utils/InputContext.ts";
+import {UrlContext} from "@utils/builder.ts";
 
 const header = 'https://nominatim.openstreetmap.org/search';
 const format = 'jsonv2'
-const query = prompt('Enter location here...')!;
-export const newUrl = urlBuilder(header, query, format);
 
 function SearchBar() {
-    const { setInput } = useContext(InputContext)
+    const { setUrl } = useContext(UrlContext)
 
     const submit = (event: React.SubmitEvent<HTMLFormElement>) => {
         event.preventDefault();
 
+
         const userInput = new FormData(event.currentTarget);
-        setInput(userInput.get('search') as string || '');
+        const query = (userInput.get('search') as string || '');
+
+        const newUrl = urlBuilder(header, query, format);
+        setUrl(newUrl);
+        console.log(newUrl)
 
     }
 
