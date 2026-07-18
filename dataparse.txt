@@ -1,9 +1,0 @@
-link example as follows:
-GET request
-https://nominatim.openstreetmap.org/search?q=Rutgers&format=jsonv2
-
-var base = "https://nominatim.openstreetmap.org/"
-var querytype = "search?q=" or search // querytype not necessary, include as part of baseUrl as all requests will be search
-var query = user input address (with pluses) // valid, just be able to implement the pluses, URL type may be helpful for the following
-var format = "jsonv2"
-var addressdetails = 0 or 1 //  ?
