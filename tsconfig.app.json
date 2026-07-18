@@ -20,7 +20,6 @@
       "@utils/*": ["src/utils/*"],
       "@hooks/*": ["src/hooks/*"],
       "@features/*": ["src/features/*"],
-      "@contexts/*": ["src/contexts/*"],
     },
 
     /* Bundler mode */
