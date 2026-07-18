@@ -1,6 +1,6 @@
 import useFetch from '@hooks/useFetch';
 import styles from './ReturnBar.module.css';
-import urlBuilder from 'builder.ts';
+import urlBuilder from '@utils/builder.ts';
 
 
 const searchURL = new URL('https://nominatim.openstreetmap.org/search?q=bakery+in+may+pen+jamaica&format=jsonv2&limit=5')
