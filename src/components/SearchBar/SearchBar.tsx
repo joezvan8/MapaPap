@@ -3,6 +3,11 @@ import TextField from '@mui/material/TextField';
 import styles from './SearchBar.module.css';
 import urlBuilder from '@utils/builder.ts';
 
+const header = 'https://nominatim.openstreetmap.org/search';
+const format = 'jsonv2'
+const query = prompt('Enter location here...')!;
+export const newUrl = urlBuilder(header, query, format);
+
 function SearchBar() {
   return (
     <Box
