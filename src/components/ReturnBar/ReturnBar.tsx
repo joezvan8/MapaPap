@@ -1,13 +1,15 @@
 import useFetch from '@hooks/useFetch';
 import styles from './ReturnBar.module.css';
-import {newUrl} from "@components/SearchBar/SearchBar.tsx";
+import {useContext} from "react";
+import {UrlContext} from "@utils/builder.ts";
+
 
 export default function ReturnBar() {
+    const { url } = useContext(UrlContext)
 
-
-    const [data] = useFetch(newUrl)
+    const [data] = useFetch(url) ?? ""
 
     return (
-        <div className={styles.returnBar}>{JSON.stringify(data)}</div>
+        <div className={styles.returnBar}>{[JSON.stringify(data), url]}</div>
     );
 }
