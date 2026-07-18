@@ -1,7 +1,7 @@
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import styles from './SearchBar.module.css';
-import baseUrl from 'builder.ts';
+import urlBuilder from 'builder.ts';
 
 function SearchBar() {
   return (

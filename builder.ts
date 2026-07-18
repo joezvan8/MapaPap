@@ -1,11 +1,11 @@
-export default function baseUrl(header: string, query: string, format: string):void {
-    const urlStarter = new URL(header);
+export default function urlBuilder(header: string, query: string, format: string):void {
+    const baseUrl = new URL(header);
     const addressDetails = "1";
     const urlformat = format;
     const input = query;
-    urlStarter.searchParams.append('q', input);
-    urlStarter.searchParams.append('format', urlformat);
-    urlStarter.searchParams.append('addressdetails', addressDetails);
+    baseUrl.searchParams.append('q', input);
+    baseUrl.searchParams.append('format', urlformat);
+    baseUrl.searchParams.append('addressdetails', addressDetails);
 
-    console.log(urlStarter.toString());
+    console.log(baseUrl.toString());
 }
