@@ -16,3 +16,9 @@
     hyphens: auto;
     line-height: 1.4;
 }
+
+.returnLoader{
+    height: inherit;
+    display: grid;
+    place-items: center;
+}
