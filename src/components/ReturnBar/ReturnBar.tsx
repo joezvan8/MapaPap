@@ -25,7 +25,7 @@ export default function ReturnBar() {
 function Loading() {
     return <CircularProgress
         size="150px"
-        color="inherit"
+        color="secondary"
 
         aria-label="Loading..."
     />
