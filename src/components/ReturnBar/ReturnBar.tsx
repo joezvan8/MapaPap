@@ -9,13 +9,18 @@ export default function ReturnBar() {
     const { url } = useContext(UrlContext)
 
     const [data, loading] = useFetch(url)
+    let searchLocation;
+
+    if (data != null) {
+        searchLocation = data?.[0]?.display_name;
+    }
 
     return (
         <div className={styles.returnBar}>
                 {
                     loading ?
                         <div className={styles.returnLoader}> <Loading /></div>   :
-                        [JSON.stringify(data), url]
+                        searchLocation
                 }
 
         </div>
