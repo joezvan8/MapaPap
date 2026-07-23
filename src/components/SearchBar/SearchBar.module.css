@@ -1,8 +1,10 @@
+/* Root colors for the search bar element */
 :root{
     --colorvar1: #FFFFFF;
     --colorvar2: #6FB6BE;
 }
 
+/* Font face implements */
 @font-face {
     font-family: 'Josefin Slab';
     src: url('../../fonts/JosefinSlab-VariableFont_wght.ttf');
@@ -14,6 +16,7 @@
     font-style: italic;
 }
 
+/* Style attributes for the search bar element */
 .searchBar{
     background-image: radial-gradient(
             rgb(from var(--colorvar1) r g b / 30%),
@@ -22,17 +25,22 @@
     width: 300px;
     border-radius: 50px;
 }
+
+/* Style attributes for the search bar element when hovered over */
 .searchBar:hover:not(:active){
     background-image: radial-gradient(
             rgb(from var(--colorvar1) r g b / 90%),
             rgb(from var(--colorvar2) r g b / 90%));
 }
+
+/* Style attributes for the search bar element when active */
 .searchBar:active{
     background-image: radial-gradient(
             rgb(from var(--colorvar1) r g b / 60%),
             rgb(from var(--colorvar2) r g b / 60%));
 }
 
+/* Style attributes for the text in search bar */
 #textbox{
     width: 100%;
     font-family: 'Josefin Slab', serif;

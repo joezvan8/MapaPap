@@ -1,7 +1,9 @@
+/* Root color for return bar element */
 :root {
     --base-color: #8B8383;
 }
 
+/* Return bar color/appearance styles */
 .returnBar{
     background-color: var(--base-color);
     mix-blend-mode: plus-lighter;
@@ -17,6 +19,7 @@
     line-height: 1.4;
 }
 
+/* Loading wheel appearance styles */
 .returnLoader{
     height: inherit;
     display: grid;
