@@ -4,7 +4,7 @@ import urlBuilder from '@utils/builder.ts';
 import {useContext} from "react";
 import {UrlContext} from "@utils/builder.ts";
 
-const header = 'https://nominatim.openstreetmap.org/search';
+const header = import.meta.env.VITE_BASE_URL;
 const format = 'jsonv2'
 
 function SearchBar() {
