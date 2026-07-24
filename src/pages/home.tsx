@@ -1,3 +1,4 @@
+/* Imports */
 import SearchBar from "@components/SearchBar/SearchBar.tsx";
 import AccountBtn from "@components/AccountBtn/AccountBtn.tsx";
 import SettingsBtn from "@components/SettingsBtn/SettingsBtn.tsx";
@@ -7,18 +8,21 @@ import { Link } from "react-router";
 import {UrlContext} from "@utils/builder.ts";
 import {useState} from "react";
 
-
+/* Creates home page */
 export default function Home(){
     const [url, setUrl] = useState("");
 
     return<>
+    {/* Intro text for page header */}
         <div id="intro-txt">Let's find some eats!</div>
 
+        {/* Search bar and return bar renders */}
         <UrlContext.Provider value={{ url, setUrl }}>
             <div id="search-bar-thingy"><SearchBar></SearchBar></div>
             <div id="return-bar"><ReturnBar></ReturnBar></div>
         </UrlContext.Provider>
 
+        {/* Navigation area to move between web pages */}
         <div id="nav-tools">
             <div className="nav-items">
                 <Link to="/account"><AccountBtn></AccountBtn></Link>

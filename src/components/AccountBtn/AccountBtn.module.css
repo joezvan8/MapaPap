@@ -1,8 +1,10 @@
+/* Account button color styles */
+
 .acctBtn {
     color: #000000;
     transform: scale(3.5);
 }
-
+/* Hover modification to the button color */
 .acctBtn:hover {
     color: hsl(from #000000 h s calc(l + 10));
 }

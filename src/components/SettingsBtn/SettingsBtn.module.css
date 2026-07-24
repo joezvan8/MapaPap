@@ -1,8 +1,10 @@
+/* Settings button color styles */
 .settBtn{
     color: #000000;
     transform: scale(3.5);
 }
 
+/* Hover modification to the button color */
 .settBtn:hover {
     color: hsl(from #000000 h s calc(l + 10));
 }

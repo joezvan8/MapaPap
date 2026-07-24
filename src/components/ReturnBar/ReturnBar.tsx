@@ -1,3 +1,5 @@
+/* Imports */
+
 import useFetch from '@hooks/useFetch';
 import styles from './ReturnBar.module.css';
 import {useContext} from "react";
@@ -5,9 +7,9 @@ import {UrlContext} from "@utils/builder.ts";
 import {CircularProgress} from "@mui/material";
 import type {Place} from "@utils/types.ts"
 
-
+/* Export return bar functionality to App.tsx */
 export default function ReturnBar() {
-    const { url } = useContext(UrlContext)
+    const { url } = useContext(UrlContext) /* creates URL variable using URL context */
 
     const [data, loading] = useFetch<Place[]>(url)
 
@@ -26,6 +28,7 @@ export default function ReturnBar() {
     );
 }
 
+/* Loading function to be used as part of the loading screen */
 function Loading() {
     return <CircularProgress
         size="150px"
