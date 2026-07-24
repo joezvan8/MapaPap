@@ -1,3 +1,4 @@
+/* Imports */
 import SearchBar from "@components/SearchBar/SearchBar.tsx";
 import AccountBtn from "@components/AccountBtn/AccountBtn.tsx";
 import SettingsBtn from "@components/SettingsBtn/SettingsBtn.tsx";
@@ -7,7 +8,7 @@ import { Link } from "react-router";
 import {UrlContext} from "@utils/builder.ts";
 import {useState} from "react";
 
-
+/* Creates home page */
 export default function Home(){
     const [url, setUrl] = useState("");
 
