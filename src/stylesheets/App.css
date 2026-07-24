@@ -1,9 +1,11 @@
+/* File-wide variables */
 :root {
     --primary-bg-color: #68f4a9;
     --secondary-bg-color: #0f3d6b;
     --spacing: 10px;
 }
 
+/* Font face implements */
 @font-face {
     font-family: 'Josefin Slab';
     src: url('../fonts/JosefinSlab-VariableFont_wght.ttf');
@@ -15,6 +17,7 @@
     font-style: italic;
 }
 
+/* CSS attributes for background of app */
 body{
     display: flex;
     flex-direction: column;
@@ -28,12 +31,14 @@ body{
     font-family: 'Josefin Slab', serif;
 }
 
+/* Size/Alignment for intro text */
 #intro-txt{
     font-size: 3.5rem;
     text-align: center;
     margin: 1rem auto;
 }
 
+/* Size/Alignment for search bar */
 #search-bar-thingy{
     justify-content: center;
     align-items: center;
@@ -41,6 +46,7 @@ body{
     margin: 15px;
 }
 
+/* Size/Alignment for return bar */
 #return-bar{
     min-width: 0;
     height: 60vh;
@@ -51,6 +57,7 @@ body{
     overflow-y: scroll;
 }
 
+/* Size/Alignment for navigation area */
 #nav-tools{
     margin-top: calc(var(--spacing) * 8);
     margin-left: var(--spacing);
@@ -60,6 +67,7 @@ body{
     justify-content: space-between;
 }
 
+/* CSS attributes for navigation items */
 .nav-items{
     display: flex;
     flex-direction: column;
@@ -69,12 +77,18 @@ body{
     font-size: 1em;
     gap: 25px;
 }
+
+/* CSS attributes for navigation items when hovered over */
 .nav-items:hover {
     color: hsl(from #000000 h s calc(l + 10));
 }
+
+/* CSS attributes for navigation item text */
 .nav-items p {
     margin: 0 0 0 0;
 }
+
+/* CSS attributes for navigation item text when hovered over */
 .nav-items:hover p {
     color: hsl(20, 30%, 50%)
 }
