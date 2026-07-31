@@ -16,3 +16,9 @@ export interface Place {
     boundingbox: string[]
 }
 
+export interface SearchResultRow {
+    id: number,
+    created_at: string,
+    location: string
+}
+
