@@ -7,7 +7,8 @@
     "dev": "dotenvx run -- vite",
     "build": "tsc -b && dotenvx run -- vite build",
     "lint": "eslint .",
-    "preview": "dotenvx run -- vite preview"
+    "preview": "dotenvx run -- vite preview",
+    "remove-stale-branches": "./deletegitbranches.sh"
   },
   "dependencies": {
     "@dotenvx/dotenvx": "^2.8.0",
