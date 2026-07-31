@@ -5,7 +5,7 @@ from supabase import create_client
 import json
 
 
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
@@ -23,8 +23,14 @@ def index():
 def postto_db():
     supabase = create_client(os.getenv('SUPABASE_URL'), os.getenv('SUPABASE_SECRET_KEY'))  # type: ignore
 
-    response = supabase.table('Search Results').insert({"location": "Rutgers Univ"}).execute()
-    return "Data added: ", jsonify(response.data)
+    payload = request.get_json()
+    location = payload.get("location")
+
+    response = (supabase.table('Search Results').upsert(
+        {"location": location},
+        on_conflict="location"
+        ).execute())
+    return "Data added: ", jsonify(response.data), 201
 
 
 @app.route('/db/supabase', methods=["GET"])
