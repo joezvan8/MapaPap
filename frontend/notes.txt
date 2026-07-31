@@ -1,0 +1,3 @@
+Things to note about current project version:
+- Currently displays all results in search history (database); Should use these results to return things to the user faster, instead of re-fetching
+- Currently only updates when the page is refreshed, to be added as an "issue" on github
