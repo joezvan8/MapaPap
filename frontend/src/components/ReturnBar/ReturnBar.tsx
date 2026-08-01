@@ -32,15 +32,28 @@ export default function ReturnBar() {
 
     const [refreshKey, setRefreshKey] = useState(0)
 
+    // Edit to useEffect to ignore previous requests updating state
     useEffect(() => {
-        getBackend().then(setBackendData);
+        let ignore = false;
+
+        getBackend().then(result => {
+            if (!ignore) setBackendData(result);
+            });
+        return () => { ignore = true; }
     }, [refreshKey])
 
+    // Edit to useEffect to guard against overlapping save/refresh cycles
     useEffect(() => {
+
+        let ignore = false;
+        if (!data || data.length === 0) return;
+
         Promise.all(data?.slice(0, 5).map(place => saveBackend(place.display_name)) ?? [])
             .then(() => {
-                setRefreshKey(prev => prev + 1)
-                })}, [data])
+                if (!ignore) setRefreshKey(prev => prev + 1)
+                });
+        return () => { ignore = true }
+    }, [data])
 
 
     return (
