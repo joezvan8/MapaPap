@@ -30,7 +30,7 @@ Inside a terminal, run the following: git clone https://github.com/joezvan8/Mapa
 
 ## Contributors
 <ul>
-  <li>Clue, Jovan - Lead Develop
+  <li>Clue, Jovan - Lead Developer
     <ul>
       <li><a href="https://linkedin.com/in/jovan-c-8bac089">LinkedIn</a></li>
       <li><a href="https://github.com/joezvan8">GitHub</a></li>
