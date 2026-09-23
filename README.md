@@ -8,7 +8,7 @@ full stack applications.
 
 ## Features
 MapaPap currently has to be run locally.
-Backend features unavailable as the require API key.
+Backend features unavailable as they require API key & injection (dotenvx run -- python app.py).
 It allows for searching for places using 
 keyword search and then returning the results
 on screen. For the purpose of demonstrating the 

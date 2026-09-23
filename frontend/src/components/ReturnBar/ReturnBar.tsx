@@ -32,15 +32,34 @@ export default function ReturnBar() {
 
     const [refreshKey, setRefreshKey] = useState(0)
 
+    // useEffect gets the backend data from the search result
     useEffect(() => {
-        getBackend().then(setBackendData);
+        let ignore = false;
+
+        getBackend().then(result => {
+            if (!ignore) setBackendData(result);
+            })
+            .catch((error) => {
+                if (!ignore) console.error('Failed to load backend data:', error);
+             });
+        return () => { ignore = true; }
     }, [refreshKey])
 
+    // useEffect returns a sliced list of the data returned from the search
     useEffect(() => {
+
+        let ignore = false;
+        if (!data || data.length === 0) return;
+
         Promise.all(data?.slice(0, 5).map(place => saveBackend(place.display_name)) ?? [])
             .then(() => {
-                setRefreshKey(prev => prev + 1)
-                })}, [data])
+                if (!ignore) setRefreshKey(prev => prev + 1)
+            })
+            .catch((error) => {
+                if (!ignore) console.error('Failed to save search results:', error);
+            });
+        return () => { ignore = true }
+    }, [data])
 
 
     return (

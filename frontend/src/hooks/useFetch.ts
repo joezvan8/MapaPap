@@ -7,6 +7,7 @@ const useFetch = <T>(url: URL | string): [ T | undefined, boolean] => {
     const [data, setData] = useState<T | undefined>();
 
     useEffect(() => {
+        let ignore = false;
             /* Fetches data from Nominatim API */
             const fetchData = async () => {
                 setLoading(true)
@@ -14,23 +15,25 @@ const useFetch = <T>(url: URL | string): [ T | undefined, boolean] => {
                 try {
                     /* Fetches data from url */
                     const response = await fetch(url);
-                    if (!response.ok) {
-                        throw new Error(`Response status: ${response.status}`)
-                    }
-
+                    if (!response.ok) throw new Error(`Response status: ${response.status}`)
                     const result = await response.json();
-                    setTimeout(() => {
+
+                    if (!ignore){
                         setData(result);
-                        setLoading(false)
+                        setLoading(false);
+                    }
+                    setTimeout(() => {
                     }, 1000)
 
                 } catch (error) {
                     console.error(error)
-                    setLoading(false)
+                    if (!ignore) setLoading(false);
                 }
 
             };
         void fetchData();
+
+        return () => { ignore = true; };
         }, [url]
     )
     return [data, loading];

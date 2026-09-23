@@ -3,12 +3,13 @@ import os
 import requests
 from supabase import create_client
 import json
-
+from dotenv import load_dotenv
 
 from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
+supabase = create_client(os.getenv('SUPABASE_URL'), os.getenv('SUPABASE_SECRET_KEY'))
 from flask_cors import CORS
 CORS(app)
 
@@ -21,7 +22,7 @@ def index():
 
 @app.route('/db/supabase', methods=["POST"])
 def postto_db():
-    supabase = create_client(os.getenv('SUPABASE_URL'), os.getenv('SUPABASE_SECRET_KEY'))  # type: ignore
+
 
     payload = request.get_json()
     location = payload.get("location")
@@ -30,12 +31,11 @@ def postto_db():
         {"location": location},
         on_conflict="location"
         ).execute())
-    return "Data added: ", jsonify(response.data), 201
+    return jsonify(response.data), 201
 
 
 @app.route('/db/supabase', methods=["GET"])
 def readfrom_db():
-    supabase = create_client(os.getenv('SUPABASE_URL'), os.getenv('SUPABASE_SECRET_KEY'))  # type: ignore
 
     response = supabase.table('Search Results').select('*').execute()
     return jsonify(response.data)
