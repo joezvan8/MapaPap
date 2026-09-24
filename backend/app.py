@@ -4,6 +4,7 @@ import requests
 from supabase import create_client
 import json
 from dotenv import load_dotenv
+load_dotenv()
 
 from flask import Flask, jsonify, request
 
