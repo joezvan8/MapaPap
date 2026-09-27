@@ -16,7 +16,7 @@ CORS(app)
 # routes
 @app.route('/')
 def index():
-    return "This works dw"
+    return "haha try harder XOXO"
 
 
 @app.route('/db/supabase', methods=["POST"])
