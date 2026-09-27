@@ -12,7 +12,7 @@ app = Flask(__name__)
 
 supabase = create_client(os.getenv('SUPABASE_URL'), os.getenv('SUPABASE_SECRET_KEY'))
 from flask_cors import CORS
-CORS(app)
+CORS(app, origins=["https://mapapap-frontend.onrender.com", "http://localhost:5173"])
 
 
 # routes
